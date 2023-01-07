@@ -1,4 +1,4 @@
-# Exercise Vue Basic
+# Exercises Vue Basic
 
 ### Challenge
 
