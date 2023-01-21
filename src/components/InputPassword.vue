@@ -21,19 +21,7 @@ export default  {
     }
     
     
-    //         let password = ref("password")
-    //         let inputPassword = computed (() => password.value)
-    //         function PasswordShow() {
-    //             password.value =  password.value === "password" ? inputPassword.value : "password"
-    //         }
-    //    return {password ,inputPassword,PasswordShow}
-    
-    //     }
-
-// function PasswordShow() {
-//     password.value =  password.value === "password" ? "text" : "password";
-    
-// }
+   
 </script>
 <template>
     <div class="container text-center input-password">
