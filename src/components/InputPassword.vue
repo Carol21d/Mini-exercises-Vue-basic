@@ -1,29 +1,46 @@
-<script setup>
+<script>
 import { ref } from 'vue';
 
-function PasswordShow() {
-     let password= document.getElementById("password");
-     if (password.type == "password") {
-        password.type = "text";
-        
-     }else{
-        password.type ="password";
-     }
+
+export default  {
+    setup() {
+        const password = ref("password");
+        const isVisible = ref (false);
+        function PasswordShow() {
+            isVisible.value = !isVisible.value;
+            
+        }
+
+   return {password, isVisible,PasswordShow};
+
+
+
+
+
+    }
+    }
     
-}
+    
+    //         let password = ref("password")
+    //         let inputPassword = computed (() => password.value)
+    //         function PasswordShow() {
+    //             password.value =  password.value === "password" ? inputPassword.value : "password"
+    //         }
+    //    return {password ,inputPassword,PasswordShow}
+    
+    //     }
 
- 
-
-
-
+// function PasswordShow() {
+//     password.value =  password.value === "password" ? "text" : "password";
+    
+// }
 </script>
-
 <template>
     <div class="container text-center input-password">
         <h1 class="my-3">Exercise Input Password</h1>
-        <input type="password" name="password" id="password" class="form-control">
+        <input  v-model="password" :type="isVisible ? 'text':'password'" name="password" id="password" class="form-control">
         <div class="d-block">
-            <span id="show-password" @click="PasswordShow" class="mt-2 btn btn-warning">Show Password</span>
+            <span id="show-password" @click="PasswordShow()" class="mt-2 btn btn-warning">Show Password</span>
         </div>
     </div>
 </template>
@@ -34,3 +51,26 @@ function PasswordShow() {
         user-select: none;
     }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

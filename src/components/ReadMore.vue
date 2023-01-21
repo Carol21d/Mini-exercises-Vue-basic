@@ -5,10 +5,13 @@ import { ref } from "vue";
 const title = ref("Exercise Read More");
 let active = ref(true);
 
+
 function textAdd() {
-  active.value = active.value === true ? false  : true
+  active.value = active.value === true  ? false  : true;
 
 }
+
+
 
 </script>
 
@@ -24,7 +27,7 @@ function textAdd() {
         temporibus pariatur ab repellendus dignissimos natus aliquam odit ullam,
         quaerat autem non hic, quidem dolore laboriosam.
       </p>
-      <button class="btn btn-primary" @click="textAdd">{{titlebtn }}</button>
+      <button class="btn btn-primary" @click="textAdd"></button>
     </div>
     <hr class="mb-4" />
   </div>
